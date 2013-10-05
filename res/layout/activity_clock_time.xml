@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ClockTime" >
+
+    <TableLayout
+        android:layout_height="wrap_content"
+	    android:layout_width="wrap_content"
+	    android:layout_gravity="center"
+	    android:stretchColumns="*" >
+		<TableRow>
+		    <TextView
+		        android:text="@string/clock_in" />
+	        <EditText android:id="@+id/enter_clock_in_hr"
+	        	android:hint="@string/hr"
+	        	android:inputType="time"  />
+	        <TextView
+	            android:text="@string/colon" />
+	        <EditText android:id="@+id/enter_clock_in_min"
+	        	android:hint="@string/min"
+	        	android:inputType="time"  />
+	    </TableRow>
+	    <TableRow>
+	        <TextView
+	            android:text="@string/clock_out" />
+	        <EditText android:id="@+id/enter_clock_out_hr"
+		        android:hint="@string/hr"
+		        android:inputType="time" />
+	        <TextView
+	            android:text="@string/colon" />
+	        <EditText android:id="@+id/enter_clock_out_min"
+		        android:hint="@string/min"
+		        android:inputType="time" />
+	    </TableRow>
+	    <TableRow>
+	       	<Button 
+	       	    android:layout_span="4"
+		        android:text="@string/button_calculate_log"
+		        android:onClick="calc_log_clock_time" />
+	    </TableRow>
+	   	<TableRow>
+	       	<Button 
+	       	    android:layout_span="4"
+		        android:text="@string/button_calculate_act"
+		        android:onClick="calc_act_clock_time" />
+	    </TableRow>
+    </TableLayout>
+
+</LinearLayout>
